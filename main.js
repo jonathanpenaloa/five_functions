@@ -19,10 +19,10 @@ const getFullName = (firstName, lastName) => {
 getFullName('Jon', 'Pena');
 
 
-const getRandoNumPassWord = (passWordSize) => {
-    if (passWordSize < 0) {
-        return "Must be greater than 1";
-    }
+const getRandoNumPassWord = () => {
+    // if (passWordSize < 0) {
+    //     return "Must be greater than 1";
+    // }
 
     let pass =  Math.random().toString().slice(2,11);;
     // let pass =  Math.floor(Math.random() * passWordSize) * 53748382;
