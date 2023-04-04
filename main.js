@@ -24,19 +24,20 @@ const getRandoNumPassWord = (passWordSize) => {
         return "Must be greater than 1";
     }
 
-    let pass =  Math.floor(Math.random() * passWordSize) * 53748382;
+    let pass =  Math.random().toString().slice(2,11);;
+    // let pass =  Math.floor(Math.random() * passWordSize) * 53748382;
     console.log(pass);
     return pass;
 }
 
-let madePass = getRandoNumPassWord(3);
+let madePass = getRandoNumPassWord();
 
 
 const checkForNumberFive = (pass) => {
-    console.log(pass);
-    let stringPass = Number.toString(pass);
-    for(let i=0; i < stringPass.length; i++ ) {
-        if (stringPass[i] == '5') {
+    // let stringPass = toString(pass);
+    // console.log(stringPass);
+    for(let i=0; i < pass.length; i++ ) {
+        if (i == 5) {
             console.log("this pass contain the number 5");
         } else {
             console.log("password is clean");
@@ -45,3 +46,8 @@ const checkForNumberFive = (pass) => {
 }
 
 checkForNumberFive(madePass);
+
+const sendPassToClient = () => {
+
+}
+
